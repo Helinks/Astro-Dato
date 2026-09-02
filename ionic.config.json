@@ -1,0 +1,7 @@
+{
+  "name": "Astrodato",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
