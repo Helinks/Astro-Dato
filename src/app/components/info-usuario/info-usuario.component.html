@@ -1,0 +1,3 @@
+<p>Escribe tu nombre 👽</p>
+<ion-input [(ngModel)]="nombre"></ion-input>
+<ion-button [disabled]="nombre.trim() ==''" (click)="comenzar()">Comenzar</ion-button>
