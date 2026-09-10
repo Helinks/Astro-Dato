@@ -1,18 +1,25 @@
 <div>
+  @if (loading()) {
+  <h6>Cargando...</h6>
+  } @else if (!loading() && asteroideCerca) {
   <div>
-    <h4>Asteroide detectado:</h4>
-    <p>Dato</p>
+    <h4>Asteroide: </h4>
+    <p>{{ asteroideCerca.name }}</p>
   </div>
   <div>
     <h4>Tamaño:</h4>
-    <p>Dato</p>
+
+    <p>{{ asteroideCerca.estimated_diameter.meters.estimated_diameter_min }} m</p>
   </div>
   <div>
     <h4>Velocidad:</h4>
-    <p>Dato</p>
+    <p>{{ asteroideCerca.close_approach_data[0].relative_velocity.kilometers_per_hour  }} km/h</p>
   </div>
   <div>
     <h4>Predicción planetaria:</h4>
-    <p>Dato</p>
+    <p></p>
   </div>
+  } @else {
+  <p>{{ error() ? 'Error al obtener los datos, inténtalo más tarde.' : 'No hay datos disponibles ahora mismo.' }}</p>
+  }
 </div>
