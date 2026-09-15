@@ -13,6 +13,7 @@ import { MenuComponent } from '../../components/menu/menu.component';
 })
 export class OpcionesPage implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit() {
