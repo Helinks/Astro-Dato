@@ -1,9 +1,21 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>opciones</ion-title>
+  <ion-toolbar class="barra">
+    <ion-title>Estado de la misión</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <app-info-asteroide></app-info-asteroide>
+<ion-content [fullscreen]="true" class="contenido">
+  <section class="portada">
+    <div class="fondo"></div>
+    <div class="textos">
+      <span class="etiqueta">Objeto cercano detectado</span>
+      <h1 class="titulo">Cuenta regresiva</h1>
+      <p class="subtitulo">Esto es lo que sabemos del visitante.</p>
+    </div>
+  </section>
+
+  <div class="cuerpo">
+    <app-info-asteroide></app-info-asteroide>
+    <app-menu></app-menu>
+  </div>
 </ion-content>

@@ -1,3 +1,5 @@
-@for (opcion of opciones; track opcion){
-    <ion-button>{{opcion.Actividad}}</ion-button>
-}
+<nav class="menu">
+  @for (opcion of opciones; track opcion) {
+    <ion-button class="opcion" expand="block">{{ opcion.Actividad }}</ion-button>
+  }
+</nav>

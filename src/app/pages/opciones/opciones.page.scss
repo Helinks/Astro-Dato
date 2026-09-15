@@ -1,0 +1,64 @@
+.contenido {
+  --background: var(--ad-bg);
+}
+
+.barra {
+  --background: rgba(11, 14, 23, 0.72);
+  --color: var(--ad-text);
+  --border-color: transparent;
+  backdrop-filter: blur(12px);
+}
+
+.portada {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+// Imagen del asteroide + degradado que funde con el fondo.
+// Sin imagen se ve solo el degradado, no se rompe.
+.fondo {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(11, 14, 23, 0) 28%, var(--ad-bg) 100%),
+    radial-gradient(90% 70% at 18% 0%, rgba(255, 122, 74, 0.22), transparent 60%),
+    url('/assets/img/asteroid.jpg') center / cover no-repeat;
+}
+
+.textos {
+  position: relative;
+  padding: 0 22px 22px;
+}
+
+.etiqueta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ad-accent);
+}
+
+.titulo {
+  margin: 6px 0 4px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 7vw, 36px);
+  letter-spacing: -0.02em;
+  color: var(--ad-text);
+}
+
+.subtitulo {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ad-text-dim);
+}
+
+.cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 20px 18px calc(32px + env(safe-area-inset-bottom));
+}

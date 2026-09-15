@@ -1,0 +1,64 @@
+.inicio {
+  --background: transparent;
+  position: relative;
+}
+
+// Imagen de fondo del espacio + degradado suave por encima.
+// Si aún no existe la imagen, se ve el degradado y no se rompe nada.
+.fondo {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 90% at 82% 8%, rgba(255, 122, 74, 0.18), transparent 55%),
+    linear-gradient(180deg, #0b0e17 0%, #0b0e17 38%, #10141f 100%),
+    url('/assets/img/space-hero.jpg') center / cover no-repeat;
+}
+
+.degradado {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 14, 23, 0.15) 0%,
+    rgba(11, 14, 23, 0.6) 58%,
+    rgba(11, 14, 23, 0.95) 100%
+  );
+}
+
+// Contenido pegado abajo: composición asimétrica, no todo centrado.
+.contenido {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14px;
+  max-width: 560px;
+  padding: 40px;
+}
+
+.etiqueta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ad-accent);
+}
+
+.titulo {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 8vw, 44px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--ad-text);
+}
+
+.texto {
+  margin: 0;
+  max-width: 42ch;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ad-text-dim);
+}
