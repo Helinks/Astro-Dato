@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { finalize } from 'rxjs';
+import { NeoWs } from '../../services/neo-ws';
 @Component({
   selector: 'app-info-asteroide',
   templateUrl: './info-asteroide.component.html',
   styleUrls: ['./info-asteroide.component.scss'],
   imports: [],
 })
-export class InfoAsteroideComponent  implements OnInit {
+export class InfoAsteroideComponent implements OnInit {
+  private neoWs = inject(NeoWs);
 
-  constructor() { }
+  asteroideCerca:any = null;
+  loading = signal(true);
+  error = signal(false);
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    this.neoWs.getDatos().subscribe({
+        next: (asteroide) => {
+          this.asteroideCerca = asteroide; 
+          this.loading.set(false)},
+        error: (err) => {
+          console.error('Error al llamar a los datos: ', err);
+          this.loading.set(false)
+          this.error.set(true);
+        },
+      });
+  }
 }
