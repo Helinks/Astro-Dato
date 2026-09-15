@@ -1,32 +1,13 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-import { MenuComponent}  from '../menu/menu.component';
-import { NgIf } from '@angular/common';
-
-=======
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { finalize } from 'rxjs';
 import { NeoWs } from '../../services/neo-ws';
->>>>>>> origin/main
 @Component({
   selector: 'app-info-asteroide',
   templateUrl: './info-asteroide.component.html',
   styleUrls: ['./info-asteroide.component.scss'],
-  imports: [MenuComponent, NgIf],
+  imports: [],
 })
 export class InfoAsteroideComponent implements OnInit {
-<<<<<<< HEAD
-
-  asteroide = {
-    nombre: 'Apophis'
-  };
-
-  constructor() {}
-
-  ngOnInit() {}
-
-}
-=======
   private neoWs = inject(NeoWs);
 
   asteroideCerca:any = null;
@@ -46,4 +27,3 @@ export class InfoAsteroideComponent implements OnInit {
       });
   }
 }
->>>>>>> origin/main
