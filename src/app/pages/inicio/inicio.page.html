@@ -1,9 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="inicio">
+  <div class="fondo"></div>
+  <div class="degradado"></div>
 
-<ion-content [fullscreen]="true">
-  <app-info-usuario></app-info-usuario>
+  <div class="contenido">
+    <span class="etiqueta">Sistema de alerta orbital</span>
+    <h1 class="titulo">Un asteroide viene<br />directo hacia ti.</h1>
+    <p class="texto">
+      Antes de que impacte, dinos quién eres. Alguien tiene que quedar en los registros.
+    </p>
+
+    <app-info-usuario></app-info-usuario>
+  </div>
 </ion-content>

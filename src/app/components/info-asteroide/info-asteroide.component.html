@@ -1,25 +1,33 @@
-<div>
-  @if (loading()) {
-  <h6>Cargando...</h6>
-  } @else if (!loading() && asteroideCerca) {
-  <div>
-    <h4>Asteroide: </h4>
-    <p>{{ asteroideCerca.name }}</p>
-  </div>
-  <div>
-    <h4>Tamaño:</h4>
+<section class="ficha">
+  <h2 class="titulo">Ficha del asteroide</h2>
 
-    <p>{{ asteroideCerca.estimated_diameter.meters.estimated_diameter_min }} m</p>
-  </div>
-  <div>
-    <h4>Velocidad:</h4>
-    <p>{{ asteroideCerca.close_approach_data[0].relative_velocity.kilometers_per_hour  }} km/h</p>
-  </div>
-  <div>
-    <h4>Predicción planetaria:</h4>
-    <p></p>
-  </div>
+  @if (loading()) {
+    <p class="estado">Rastreando el cielo…</p>
+  } @else if (asteroideCerca) {
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <span class="etiqueta">Asteroide detectado</span>
+        <span class="valor">{{ asteroideCerca.name }}</span>
+      </article>
+
+      <article class="tarjeta">
+        <span class="etiqueta">Tamaño</span>
+        <span class="valor">{{ asteroideCerca.estimated_diameter.meters.estimated_diameter_min }} m</span>
+      </article>
+
+      <article class="tarjeta">
+        <span class="etiqueta">Velocidad</span>
+        <span class="valor">{{ asteroideCerca.close_approach_data[0].relative_velocity.kilometers_per_hour }} km/h</span>
+      </article>
+
+      <article class="tarjeta ancha">
+        <span class="etiqueta">Predicción planetaria</span>
+        <span class="valor">—</span>
+      </article>
+    </div>
   } @else {
-  <p>{{ error() ? 'Error al obtener los datos, inténtalo más tarde.' : 'No hay datos disponibles ahora mismo.' }}</p>
+    <p class="estado">
+      {{ error() ? 'Error al obtener los datos, inténtalo más tarde.' : 'No hay datos disponibles ahora mismo.' }}
+    </p>
   }
-</div>
+</section>

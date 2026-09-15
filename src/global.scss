@@ -25,13 +25,34 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
+/* AstroDato es una app espacial: modo oscuro siempre */
+@import '@ionic/angular/css/palettes/dark.always.css';
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+/* ============================================================
+   AstroDato — base del tema
+   ============================================================ */
+:root {
+  --ion-background-color: #0b0e17;
+  --ion-background-color-rgb: 11, 14, 23;
+  --ion-text-color: #f4f6fb;
+  --ion-text-color-rgb: 244, 246, 251;
+
+  --ion-color-primary: #ff8a5c;
+  --ion-color-primary-rgb: 255, 138, 92;
+  --ion-color-primary-contrast: #1a1005;
+  --ion-color-primary-contrast-rgb: 26, 16, 5;
+  --ion-color-primary-shade: #e0764f;
+  --ion-color-primary-tint: #ff976b;
+
+  --ion-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: var(--ad-bg, #0b0e17);
+  color: var(--ad-text, #f4f6fb);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Sora', 'Inter', sans-serif;
+}
