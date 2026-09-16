@@ -1,3 +1,22 @@
-<p>Escribe tu nombre 👽</p>
-<ion-input [(ngModel)]="nombre"></ion-input>
-<ion-button [disabled]="nombre.trim() ==''" (click)="comenzar()">Comenzar</ion-button>
+<div class="formulario">
+  <label class="etiqueta">
+    <ion-icon name="planet-outline"></ion-icon>
+    ¿Cómo te llamas?
+  </label>
+
+  <ion-input
+    class="campo"
+    fill="solid"
+    placeholder="Tu nombre"
+    [(ngModel)]="nombre">
+  </ion-input>
+
+  <ion-button
+    class="boton"
+    expand="block"
+    [disabled]="nombre.trim() == ''"
+    (click)="comenzar()">
+    Comenzar
+    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+  </ion-button>
+</div>

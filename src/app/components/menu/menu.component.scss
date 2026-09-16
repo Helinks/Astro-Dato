@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+// Cada acción es un ion-button a ancho completo con look de tarjeta suave.
+.opcion {
+  --background: var(--ad-surface);
+  --background-activated: var(--ad-surface-2);
+  --background-hover: var(--ad-surface-2);
+  --color: var(--ad-text);
+  --border-radius: 14px;
+  --box-shadow: none;
+  --padding-top: 18px;
+  --padding-bottom: 18px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}

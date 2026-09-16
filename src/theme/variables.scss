@@ -1,2 +1,22 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+// AstroDato — tokens del tema espacial
+// Colores propios de la app (se usan en los estilos de cada componente).
+
+:root {
+  // Fondos
+  --ad-bg: #0b0e17;
+  --ad-bg-soft: #10141f;
+  --ad-surface: rgba(255, 255, 255, 0.05);
+  --ad-surface-2: rgba(255, 255, 255, 0.07);
+  --ad-border: rgba(255, 255, 255, 0.09);
+
+  // Texto
+  --ad-text: #f4f6fb;
+  --ad-text-dim: #9aa3ba;
+  --ad-text-faint: #6a7288;
+
+  // Acento cálido (el asteroide entrante)
+  --ad-accent: #ff8a5c;
+  --ad-accent-strong: #ff6f43;
+  --ad-accent-soft: rgba(255, 138, 92, 0.14);
+  --ad-glow: rgba(255, 122, 74, 0.35);
+}
